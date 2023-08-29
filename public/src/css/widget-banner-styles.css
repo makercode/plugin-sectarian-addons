@@ -1,0 +1,102 @@
+.banner-parallax {
+    background-color: #d5eaff;
+    background-image: radial-gradient( farthest-side at 5% 100%, #fff, transparent 700px ),
+        radial-gradient( farthest-side at 25% 320%, #82adff, transparent 1400px ),
+        radial-gradient( farthest-corner at bottom right, #fff, transparent 1200px ),
+        radial-gradient( farthest-side at center left, #fff, transparent 1200px ),
+        radial-gradient( farthest-side at 35% 35%, rgba(255,255,255,.7), transparent 700px );
+}
+
+.banner-parallax .title-sector-main {
+    display: inline-block;
+    font-weight: 900;
+    color: transparent;
+    -webkit-background-clip: text;
+    --tw-gradient-from: #000;
+    --tw-gradient-to: #fff;
+    --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to);
+}
+
+.banner-parallax .contextualize {
+    width: 100%;
+    position: relative;
+}
+
+.banner-parallax .contextualizer-image {
+    position: relative;
+    padding: 24px;
+    max-height: 720px;
+}
+
+.banner-parallax .contextualizer-title {
+    padding: 24px 24px;
+}
+
+.banner-parallax .contextualizer-title .title-sector-main {
+    font-size: 58px;
+    margin: 0;
+    position: relative;
+    z-index: 9;
+}
+
+.banner-parallax .title-sector-1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.banner-parallax .title-sector-3 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.banner-parallax .contextualizer-title .title-sector-main {
+    font-size: 48px;
+}
+
+
+/* media queries */
+
+@media only screen and (min-width: 392px) {
+    .banner-parallax .title-sector-1 {
+        font-size: 24px;
+        margin: 0;
+    }
+    
+    .banner-parallax .title-sector-3 {
+        font-size: 32px;
+        margin: 0;
+    }
+
+    .banner-parallax .contextualizer-title .title-sector-main {
+        font-size: 56px;
+    }
+    
+    .banner-parallax .contextualizer-image {
+        position: relative;
+        padding: 24px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .banner-parallax .contextualizer-title {
+        padding: 290px 0;
+    }
+    .banner-parallax .contextualizer-title .title-sector-main {
+        font-size: 86px;
+    }
+    .banner-parallax .title-sector-1 {
+        font-size: 28px;
+    }
+    .banner-parallax .title-sector-3 {
+        font-size: 58px;
+    }
+    .banner-parallax .contextualizer-image {
+        position: absolute;
+        margin-top: auto;
+        margin-bottom: auto;
+        top: 0;
+        bottom: 0;
+        right: -180px;
+    }
+    
+}
