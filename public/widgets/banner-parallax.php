@@ -5,6 +5,10 @@ class Elementor_Banner_Parallax extends \Elementor\Widget_Base {
 		return [ 'widget-banner-styles' ];
 	}
 
+	public function get_script_depends() {
+		return [ 'widget-banner-scripts' ];
+	}
+
 	public function get_name() {
 		return 'banner_parallax';
 	}
@@ -197,22 +201,26 @@ class Elementor_Banner_Parallax extends \Elementor\Widget_Base {
 		?>
 		<div class="banner-parallax elementor-section elementor-top-section elementor-section-boxed">
 			<div class="elementor-container elementor-column-gap-extended">
-				<div class="contextualizer">
-					<div class="contextualizer-title">
-						<h3 class="title-sector-1">
-							<?php echo $settings['title_sector_1']; ?>
-						</h3>
-						<h2 class="title-sector-main">
-							<?php echo $settings['title_sector_2']; ?>
-						</h2>
-						<h3 class="title-sector-3">
-							<?php echo $settings['title_sector_3']; ?>
-						</h3>
-					</div>
-					<img class="contextualizer-image" src="<?php echo $settings['image']['url']; ?>">
+				<div class="contextualizer" id="scene">
+					<h3 class="title-sector-1" data-depth="0.15">
+						<?php echo $settings['title_sector_1']; ?>
+					</h3>
+					<h2 class="title-sector-main" data-depth="0.20">
+						<?php echo $settings['title_sector_2']; ?>
+					</h2>
+					<h3 class="title-sector-3" data-depth="0.15">
+						<?php echo $settings['title_sector_3']; ?>
+					</h3> 
+					<img class="contextualizer-image" src="<?php echo $settings['image']['url']; ?>" data-depth="0.10">
 				</div>
 			</div>
 		</div>
+		<script>
+			jQuery( document ).ready(function() {
+				var scene = document.getElementById('scene');
+				var parallaxInstance = new Parallax(scene);
+			});
+		</script>
 
 		<?php
 	}
