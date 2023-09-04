@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Sectarian Addons
  * Description: Sectarian addons widgets for Elementor.
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      Elementor Developer
  * Author URI:  https://codesectarian.com/
  * Text Domain: codesectarian
