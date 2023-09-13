@@ -29,7 +29,7 @@
 
 .banner-parallax .contextualizer {
     width: 100%!important;
-    padding: 60% 32px 24px;
+    padding: 24px 0 24px;
     top: 0px;
     max-height: 100%;
     margin: auto;
@@ -39,8 +39,8 @@
 
 .banner-parallax .contextualizer-image {
     position: relative;
-    padding: 24px;
-    max-height: 580px;
+    padding: 0;
+    max-height: 100%;
 }
 
 .banner-parallax .contextualizer-title {
@@ -79,6 +79,111 @@
 }
 
 
+/* circled buyttons */
+
+.services-list {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    width: 420px;
+    height: 420px;
+}
+.service-item {
+    position: absolute;
+    background: rgb(255 255 255 / 85%);
+    border-radius: 36px;
+    padding: 5px;
+    font-size: 0;
+    box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, 0.15);
+    font-weight: 600;
+}
+.service-item a {
+    display: inline-block;
+    line-height: 0;
+    color: #333;
+}
+.service-item-1 {
+    left: 60px;
+    bottom: 350px;
+}
+.service-item-1 a {
+    color: #5a9dfb;
+}
+
+.service-item-2 {
+    left: -3px;
+    bottom: 282px;
+}
+.service-item-2 a {
+    color: #b040ff;
+}
+
+.service-item-3 {
+    left: -28px;
+    bottom: 194px;
+}
+.service-item-3 a {
+    color: #eb7f00;
+}
+
+.service-item-4 {
+    left: -12px;
+    bottom: 100px;
+}
+.service-item-4 a {
+    color: #fd3f6b;
+}
+
+.service-item-5 {
+    left: 44px;
+    bottom: 24px;
+}
+.service-item-5 a {
+    color: #3283ff;
+}
+
+.service-item-6 {
+    left: 134px;
+    bottom: -20px;
+}
+.service-item-6 a {
+    color: #1ac29f;
+}
+
+.service-item .link-content {
+    display: inline-block;
+    width: 0;
+    transition: .5s;
+    overflow: hidden;
+    line-height: 1em;
+    vertical-align: middle;
+    font-size: 18px;
+    text-align: center;
+}
+.service-item:hover .link-content {
+    display: inline-block;
+    width: 220px;
+    transition: .5s;
+}
+.service-item .link-content .link-content-text {
+    min-width: 220px;
+    display: inline-block;
+    width: 0;
+    padding: 0 12px 0 0; 
+}
+
+.circled-buttons {
+    right: 20px;
+    left: auto!important;
+    bottom: 140px;
+    top: auto!important;
+    z-index: 5;
+    position: absolute;
+    display: none;
+}
+
 /* media queries */
 
 @media only screen and (min-width: 392px) {
@@ -98,7 +203,7 @@
     
     .banner-parallax .contextualizer-image {
         position: relative;
-        padding: 24px;
+        padding: 12px;
     }
 }
 
@@ -122,9 +227,15 @@
         margin-top: auto;
         margin-bottom: auto;
         top: 0;
-        bottom: 0;
-        right: -120px!important;
+        bottom: -75px;
+        right: -140px!important;
         left: auto!important;
     }
     
+}
+
+@media only screen and (min-width: 1248px) {
+    .circled-buttons {
+        display: block;
+    }
 }
