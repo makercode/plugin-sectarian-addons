@@ -52,14 +52,14 @@ class Elementor_Banner_Parallax extends \Elementor\Widget_Base {
 			]
 		);
 
-			$this->add_control(
-				'title_sector_1',
-				[
-					'label' => esc_html__( 'Titulo Superior', 'elementor-addon' ),
-					'type' => \Elementor\Controls_Manager::TEXT,
-					'default' => esc_html__( 'Encuentra', 'elementor-addon' ),
-				]
-			);
+		$this->add_control(
+			'title_sector_1',
+			[
+				'label' => esc_html__( 'Titulo Superior', 'elementor-addon' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'Encuentra', 'elementor-addon' ),
+			]
+		);
 			
 		$this->end_controls_section();
 
