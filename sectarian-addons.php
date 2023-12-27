@@ -16,14 +16,13 @@ function register_widget_styles() {
 add_action( 'wp_enqueue_scripts', 'register_widget_styles' );
 
 
-function register_widget_scripts()
-{
+function register_widget_scripts() {
     wp_register_script( 'widget-banner-scripts', 'https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js' );
 }
 add_action( 'wp_enqueue_scripts', 'register_widget_scripts' );
 
 
-function register_hello_world_widget( $widgets_manager ) {
+function register_sectarian_widget( $widgets_manager ) {
 
 	require_once( __DIR__ . '/public/widgets/banner-parallax.php' );
 	require_once( __DIR__ . '/public/widgets/timeline.php' );
@@ -32,5 +31,5 @@ function register_hello_world_widget( $widgets_manager ) {
 	$widgets_manager->register( new \Elementor_Timeline() );
 
 }
-add_action( 'elementor/widgets/register', 'register_hello_world_widget' );
+add_action( 'elementor/widgets/register', 'register_sectarian_widget' );
 
