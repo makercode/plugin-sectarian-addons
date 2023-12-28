@@ -91,7 +91,7 @@ class Elementor_Timeline extends \Elementor\Widget_Base
                 'label' => esc_html__( 'Punto timeline', 'plugin-name' ),
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
-                'title_field' => '{{{ list_item }}}',
+                'title_field' => '{{{ title_item }}}',
             ]
         );
 
